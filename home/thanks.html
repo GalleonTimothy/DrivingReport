@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css.css">
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  var disclaimer =  document.querySelector("img[alt='www.000webhost.com']");
+   if(disclaimer){
+       disclaimer.remove();
+   }  
+ });
+
+</script>
+    <title>Home</title>
+
+</head>
+<body>
+
+<h2>How's My Driving</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="carlmar.html"><img src="../profiles/omar.png">   Omar Maute</a></li>
+  <li><a href="ho.html"><img src="../profiles/ho.png">   Ho Lee Park</a></li>
+  <li><a href="carl.html"><img src="../profiles/carl.png">   Carl Gador</a></li>
+  <li><a href="tobby.html"><img src="../profiles/tobby.png">   Tobby Roe</a></li>
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>

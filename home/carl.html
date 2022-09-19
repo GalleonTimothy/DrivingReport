@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  var disclaimer =  document.querySelector("img[alt='www.000webhost.com']");
+   if(disclaimer){
+       disclaimer.remove();
+   }  
+ });
+
+</script>
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <div class="container">
+    <div class="imgborder">
+        <img src="../profiles/carl.png" alt="timothy">
+    </div>
+    <h2><span>Carl Gador</span></h2>
+    <div class="inside">
+
+<p class="plate">Plate Number</p>
+        <div class="platenumber">
+        <p id="p1" class="number">PH 9999</p>
+
+        <button onclick="copyToClipboard('#p1')" class="copybutton">Copy</button>
+        </div>
+
+<p class="plate">Contact Number</p>
+<div class="platenumber">
+        <p id="p2" class="phonenumber">09568487575</p>
+
+        <button onclick="copyToClipboard('#p2')" class="copybutton">Copy</button>
+        </div>
+
+<p class="plate">Route & Schedule</p>
+<div class="schedule">
+    <p>Luzon - Mindanao</p>
+    <p>First Trip: 2:00 am</p>
+    <p>Last Trip: 2:00 pm</p>
+</div>
+
+<div class="report">
+<a href="../report/report.html" style="text-decoration: none; color: white;">REPORT</a>
+</div>
+
+    </div>
+    <div class="ewan"></div>
+</div>
+</center>
+
+
+
+<script type="text/javascript">
+    function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+</script>
+</body>
+</html>
